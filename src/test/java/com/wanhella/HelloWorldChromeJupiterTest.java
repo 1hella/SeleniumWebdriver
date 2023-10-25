@@ -19,7 +19,6 @@ import static org.slf4j.LoggerFactory.getLogger;
 
 public class HelloWorldChromeJupiterTest {
     static final Logger log = getLogger(lookup().lookupClass());
-    private static final String WEB_FORM_URL = "https://bonigarcia.dev/selenium-webdriver-java/web-form.html";
     private static final String WEB_ROOT_URL = "https://bonigarcia.dev/selenium-webdriver-java/";
 
     private WebDriver driver;
