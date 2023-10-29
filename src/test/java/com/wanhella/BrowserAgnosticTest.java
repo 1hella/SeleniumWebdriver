@@ -205,7 +205,7 @@ public class BrowserAgnosticTest {
     }
 
     @Test
-    void testWEbElementScreenshot() throws IOException {
+    void testWebElementScreenshot() throws IOException {
         driver.get(WEB_FORM_URL);
 
         WebElement form = driver.findElement(By.tagName("form"));
