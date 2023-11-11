@@ -1,38 +1,33 @@
-package com.wanhella.pom;
+package com.wanhella.pageobjectmodel;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BasicLoginJupiterTest {
-
-    WebDriver driver;
-    BasicLoginPage login;
+public class ExtendedLoginJupiterTest {
+    ExtendedLoginPage login;
 
     @BeforeEach
     void setup() {
-        driver = WebDriverManager.chromedriver().create();
-        login = new BasicLoginPage(driver);
+        login = new ExtendedLoginPage("chrome");
     }
 
     @AfterEach
     void teardown() {
-        driver.quit();
+        login.quit();
     }
 
     @Test
-    void testBasicLoginSuccess() {
+    void testLoginSuccess() {
         login.with("user", "user");
         assertThat(login.successBoxPresent()).isTrue();
     }
 
     @Test
-    void testBasicLoginFailure() {
-        login.with("bad-user", "bad-password");
+    void testLoginFailure() {
+        login.with("badUser", "badPassword");
         assertThat(login.successBoxPresent()).isFalse();
     }
 }

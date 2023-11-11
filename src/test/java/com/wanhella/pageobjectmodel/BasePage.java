@@ -1,4 +1,4 @@
-package com.wanhella.pom;
+package com.wanhella.pageobjectmodel;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
