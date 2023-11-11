@@ -37,4 +37,6 @@ build/
 ### Mac OS ###
 .DS_Store
 
+my-pdf.pdf
+
 fullpage-screenshot-chrome.png
